@@ -8,6 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		double firstNumber = 0, secondNumber = 0, result = 0;
 		Scanner scanner = new Scanner(System.in);
+
 		String[] allowedOperation = { "+", "-", "*", "/" };
 		String resposta;
 
@@ -22,8 +23,11 @@ public class Main {
 
 		String operation = scanner.nextLine();
 
-		if (!operation.contentEquals(allowedOperation[0]) && !operation.contentEquals(allowedOperation[1])
-				&& !operation.contentEquals(allowedOperation[2]) && !operation.contentEquals(allowedOperation[3])) {
+		//(!Arrays.asList(allowedOperations).contains(operation)) 
+		if (!operation.contentEquals(allowedOperation[0]) &&
+			!operation.contentEquals(allowedOperation[1]) &&
+			!operation.contentEquals(allowedOperation[2]) &&
+			!operation.contentEquals(allowedOperation[3])) {
 			System.out.println("Operação inválida, reinicie o programa");
 			return;
 		}
@@ -36,6 +40,7 @@ public class Main {
 			System.out.print("Digite o segundo número: ");
 			secondNumber = scanner.nextDouble();
 			scanner.nextLine();
+			
 		} catch (InputMismatchException e) {
 			System.out.println("Caracter inválido, reinicie o programa.");
 			System.exit(0);
@@ -62,7 +67,6 @@ public class Main {
 				result = firstNumber / secondNumber;
 			}
 			break;
-
 		}
 
 		System.out.println("Resultado: " + firstNumber + " " + operation + " " + secondNumber + " = " + result);
@@ -74,16 +78,18 @@ public class Main {
 				if (resposta.equals("sim")) {
 					Main restartProgram = new Main();
 					restartProgram.main(args);
+					//Será que enche a memória
 					
 				} else if(resposta.equals("nao") || resposta.equals("não")){
 					System.out.println("O programa será encerrado");
 					System.exit(0);
 					
 				} else {
-					System.out.println("Opção invalida, escolha novamente: ");
+					System.out.println("Opção inválida, escolha novamente: ");
 				}
 
-		} while (!resposta.equals("sim") || !resposta.equals("nao") || !resposta.equals("não"));
+			} while (!resposta.equals("sim") || !resposta.equals("nao") || !resposta.equals("não"));
 
+			scanner.close();
 	}
 }
