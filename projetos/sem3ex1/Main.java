@@ -83,7 +83,7 @@ public class Main {
 					System.out.println("Opção invalida, escolha novamente: ");
 				}
 
-		} while (!resposta.equals("sim") && !resposta.equals("nao") && !resposta.equals("não"));
+		} while (!resposta.equals("sim") || !resposta.equals("nao") || !resposta.equals("não"));
 
 	}
 }
