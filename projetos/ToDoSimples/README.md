@@ -29,12 +29,13 @@ Este é um simples gerenciador de tarefas desenvolvido com **HTML**, **CSS** e *
 
 ## 📁 Estrutura do Projeto
 to-do-list/
-├── index.html         # HTML structure
-├── style.css          # CSS styling
-└── scripts.js         # JavaScript logic
-```
 
----
+├── index.html         # HTML structure
+
+├── style.css          # CSS styling
+
+└── scripts.js         # JavaScript logic
+
 
 ## 🧠 Como funciona
 
@@ -44,7 +45,7 @@ to-do-list/
 4. **`saveTasks()`**: Salva as listas atuais em localStorage.
 5. **`loadTasks()`**: Carrega as listas salvas do localStorage ao abrir a página.
 
----
+
 
 ## 💡 Requisitos
 
@@ -60,7 +61,7 @@ Este projeto é livre para uso educacional ou pessoal.
 
 ## ✨  Melhorias Futuras (sugestões)
 
-Edição de tarefas
-Filtros por categoria ou status
-Tema escuro/claro
-Integração com backend (Firebase, por exemplo)
+- Edição de tarefas
+- Filtros por categoria ou status
+- Tema escuro/claro
+- Integração com backend (Firebase, por exemplo)
