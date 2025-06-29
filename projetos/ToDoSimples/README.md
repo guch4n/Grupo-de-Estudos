@@ -1,35 +1,33 @@
 # 📝 To-Do List (Task Manager)
 
-This is a simple **Task Manager** built using **HTML**, **CSS**, and **Vanilla JavaScript**. It allows users to:
+Este é um simples gerenciador de tarefas desenvolvido com **HTML**, **CSS** e **JavaScript puro**, que permite ao usuário:
 
-- Add new tasks
-- Mark tasks as completed
-- Delete tasks
-- Persist tasks using `localStorage`, so they are saved even after closing or refreshing the browser
-
----
-
-## 🚀 Features
-
-### ✅ Add Task
-- Enter a task and click **"Add"**.
-- Blank or whitespace-only tasks are not allowed.
-
-### 🔁 Mark as Completed
-- Click the ✅ icon to move a task from **Ongoing Tasks** to **Completed Tasks**.
-
-### ❌ Delete Task
-- Click the ❌ icon to delete a task from either list.
-
-### 💾 Persistent Storage
-- Tasks are automatically saved to your browser's localStorage.
-- They persist across sessions without any backend.
+- Adicionar tarefas pendentes
+- Marcar tarefas como concluídas
+- Excluir tarefas de ambas as listas
+- Armazenar os dados localmente usando `localStorage`, garantindo que tarefas não se percam ao recarregar ou fechar a página
 
 ---
 
-## 📁 Project Structure
+## 🚀 Funcionalidades
 
-```
+### ✅ Adicionar Tarefa
+- Digite uma tarefa no campo de texto e clique em **"Add"**.
+- Tarefas vazias ou com apenas espaços em branco não são permitidas.
+
+### 🔁 Marcar como Concluída
+- Clique no ícone ✅ ao lado de uma tarefa para movê-la da lista **Ongoing Tasks** para **Completed Tasks**.
+
+### ❌ Excluir Tarefa
+- Clique no ícone ❌ para remover permanentemente uma tarefa, esteja ela pendente ou concluída.
+
+### 💾 Persistência com Local Storage
+- Todas as tarefas são salvas automaticamente no navegador.
+- Mesmo após fechar ou atualizar a página, suas tarefas permanecem salvas.
+
+---
+
+## 📁 Estrutura do Projeto
 to-do-list/
 ├── index.html         # HTML structure
 ├── style.css          # CSS styling
@@ -38,45 +36,31 @@ to-do-list/
 
 ---
 
-## 🧠 How It Works
+## 🧠 Como funciona
 
-1. **`addTask()`**: Adds a task to the ongoing list and updates localStorage.
-2. **`completeTask()`**: Moves a task to the completed list.
-3. **`deleteTask()`**: Deletes a task from either list.
-4. **`saveTasks()`**: Saves the current state to localStorage.
-5. **`loadTasks()`**: Loads saved tasks on page load.
-
----
-
-## 💡 Requirements
-
-No installation required. Simply open the `index.html` file in any modern browser.
+1. **`addTask()`**: Adiciona uma nova tarefa na lista "Ongoing Tasks" e atualiza o localStorage.
+2. **`completeTask()`**: Move a tarefa para a lista "Completed Tasks".
+3. **`deleteTask()`**: Remove uma tarefa de qualquer uma das listas.
+4. **`saveTasks()`**: Salva as listas atuais em localStorage.
+5. **`loadTasks()`**: Carrega as listas salvas do localStorage ao abrir a página.
 
 ---
 
-## 📷 Screenshot (optional)
+## 💡 Requisitos
 
-You can include a screenshot of your app:
-
-```html
-<img src="screenshot.png" width="600px" alt="App UI Example" />
-```
+Nenhuma instalação necessária. Basta abrir o arquivo `index.html` em um navegador moderno.
 
 ---
 
-## 📄 License
+## 📄 Licença
 
-This project is open for educational and personal use.
-
----
-
-## ✨ Future Improvements (Suggestions)
-
-- Edit tasks
-- Filter tasks by status or category
-- Light/Dark theme toggle
-- Backend integration (e.g., Firebase)
+Este projeto é livre para uso educacional ou pessoal.
 
 ---
 
-Made with ❤️ using Vanilla JavaScript!
+## ✨  Melhorias Futuras (sugestões)
+
+Edição de tarefas
+Filtros por categoria ou status
+Tema escuro/claro
+Integração com backend (Firebase, por exemplo)
