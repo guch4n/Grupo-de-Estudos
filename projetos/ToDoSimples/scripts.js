@@ -25,7 +25,7 @@ function deleteTask(span) {
 }
 
 function completeTask(span) {
-    const taskText = span.parentElement.childNodes[0].textContent;
+    let taskText = span.parentElement.childNodes[0].textContent;
 
     let completedLi = document.createElement("li");
     completedLi.innerHTML = taskText + 
@@ -38,10 +38,10 @@ function completeTask(span) {
 }
 
 function saveTasks() {
-    const ongoingTasks = Array.from(document.querySelectorAll("ul.onGoing li"))
+    let ongoingTasks = Array.from(document.querySelectorAll("ul.onGoing li"))
         .map(li => li.childNodes[0].textContent);
 
-    const completedTasks = Array.from(document.querySelectorAll("ul.concludes li"))
+    let completedTasks = Array.from(document.querySelectorAll("ul.concludes li"))
         .map(li => li.childNodes[0].textContent);
 
     localStorage.setItem("ongoingTasks", JSON.stringify(ongoingTasks));
@@ -49,8 +49,8 @@ function saveTasks() {
 }
 
 function loadTasks() {
-    const ongoingTasks = JSON.parse(localStorage.getItem("ongoingTasks")) || [];
-    const completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+    let ongoingTasks = JSON.parse(localStorage.getItem("ongoingTasks")) || [];
+    let completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
 
     ongoingTasks.forEach(text => {
         let li = document.createElement("li");
